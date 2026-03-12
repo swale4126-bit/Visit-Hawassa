@@ -1,0 +1,498 @@
+/* Reset and Basic Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #FD5E53; /* Sunset Orange */
+  --text-color: #333;
+  --light-bg: #f4f7f6;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Zig-Zag Layout */
+.zig-zag-section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.zig-zag-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.zig-zag-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.zig-zag-image {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.zig-zag-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.zig-zag-item:hover .zig-zag-image img {
+  transform: scale(1.05);
+}
+
+.zig-zag-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.zig-zag-content h3 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.zig-zag-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Masonry Grid (Simple CSS Column approach) */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.masonry-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .zig-zag-item, .zig-zag-item:nth-child(even) {
+    flex-direction: column;
+  }
+  
+  .masonry-grid {
+    column-count: 1;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+header {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--primary-color);
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  color: var(--white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url("images/hawassa well known.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+.btn-hero:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+}
+
+/* Main Content Area */
+main {
+  flex: 1;
+  width: 100%;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* Image Grid / Cards */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-info h3 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.card-info p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+footer p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .nav-links {
+    display: none; /* Mobile menu implementation would go here */
+  }
+}
+
+/* Page Title Styling */
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin: 40px 0 20px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Prose Styling for Text-Heavy Content */
+.prose {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.prose section {
+  background: var(--white);
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.prose section:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.prose h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.prose p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(253, 94, 83, 0.1));
+  border-left: 4px solid var(--accent-color);
+  padding: 20px 30px;
+  margin: 30px 0;
+  border-radius: 8px;
+}
+
+.highlight-box p {
+  margin: 0;
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}

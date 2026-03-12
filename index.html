@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hawassa City Guide - Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
+
+      .hero {
+        background-image: url("images/hawassa well known.png");
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 42px;
+        font-weight: bold;
+        text-shadow: 3px 3px 6px black;
+      }
+      .content {
+        padding: 35px;
+        text-align: center;
+      }
+
+      .section {
+        margin-bottom: 45px;
+      }
+
+      .image-grid {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .image-grid div {
+        width: 250px;
+        text-align: center;
+      }
+
+      .image-grid img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Visit Hawassa</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          
+          <li class="dropdown">
+            <a href="#">Attractions</a>
+            <div class="dropdown-content">
+              <a href="religious.html">Religious</a>
+              <a href="entertainment.html">Entertainment</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Resorts & Food</a>
+            <div class="dropdown-content">
+              <a href="resorts.html">Resorts</a>
+              <a href="food.html">Food</a>
+            </div>
+          </li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li class="dropdown">
+            <a href="#">Visitor Info</a>
+            <div class="dropdown-content">
+              <a href="travel.html">Tips</a>
+            </div>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Welcome to Hawassa</h1>
+          <p>Discover the beauty of the Rift Valley</p>
+          <a href="#attractions" class="btn-hero">Explore Now</a>
+        </div>
+      </div>
+
+      <div class="content" id="attractions">
+        <div class="section">
+          <h2>Top Attractions</h2>
+          <p class="section-subtitle">Explore the most popular destinations in our beautiful city</p>
+
+          <div class="zig-zag-section">
+            <div class="zig-zag-item">
+              <div class="zig-zag-image">
+                  <img src="images/lake hawassa.png" alt="Lake Hawassa" />
+              </div>
+              <div class="zig-zag-content">
+                <h3>Lake Hawassa</h3>
+                <p>A beautiful freshwater lake in the Great Rift Valley, famous for its hippos and birdlife. Enjoy a boat ride or simply relax by the shore while watching the sunset.</p>
+              </div>
+            </div>
+
+            <div class="zig-zag-item">
+              <div class="zig-zag-image">
+                  <img src="images/am1.jpg" alt="Amora Gedel Park" />
+              </div>
+              <div class="zig-zag-content">
+                <h3>Amora Gedel Park</h3>
+                <p>A perfect spot for bird watching and relaxation. Get close to nature and see Marabou storks, monkeys, and other wildlife in their natural habitat.</p>
+              </div>
+            </div>
+
+            <div class="zig-zag-item">
+              <div class="zig-zag-image">
+                <a href="food.html">
+                  <img src="images/fish market.png" alt="Fish Market" />
+                </a>
+              </div>
+              <div class="zig-zag-content">
+                <h3><a href="food.html" style="text-decoration: none; color: inherit;">Fish Market</a></h3>
+                <p>Experience the local culture and fresh fish at the famous "Amora Gedel" fish market. Taste the delicious fish soup and grilled tilapia fresh from the lake.</p>
+              </div>
+            </div>
+
+            <div class="zig-zag-item">
+              <div class="zig-zag-image">
+                  <img src="images/t1.jpg" alt="Tabor Mountain" />
+              </div>
+              <div class="zig-zag-content">
+                <h3>Tabor Mountain</h3>
+                <p>Hiking trails with panoramic views of the city and the lake. A moderate hike that rewards you with breathtaking scenery, especially at sunrise or sunset.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Hawassa City Project. Group 1</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
