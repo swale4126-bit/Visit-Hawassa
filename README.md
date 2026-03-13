@@ -167,22 +167,6 @@ The website is compatible with modern web browsers including:
 - Safari
 - Opera
 
-## Project Team
-
-Created by Group 1 for the Hawassa City Tourism Project.
-
-### Team Members
-
-| Name | Student ID |
-|------|------------|
-| Anteneh Fisseha | TNaScR/1008/16 |
-| Amansisa Abebe | NaScRR/1244/16 |
-| Natan Gizachew | NaScRR/3134/16 |
-| Natanim Sisay | NaScRR/3141/16 |
-| Wale Solomon | NaScRR/3742/16 |
-| Marta Megersa | NaScRR/2791/16 |
-| Netsanet Mulugeta | NaScRR/0650/15 |
-
 ## License
 
 This project is created for educational and promotional purposes for Hawassa City tourism.
@@ -190,8 +174,8 @@ This project is created for educational and promotional purposes for Hawassa Cit
 ## Contact
 
 For inquiries about the website or Hawassa tourism:
-- Email: antenehfish@gmail.com
-- Phone: +251 900 000 000
+- Email: swale4126@gmail.com
+- Phone: +251 963 621 997
 
 ---
 
