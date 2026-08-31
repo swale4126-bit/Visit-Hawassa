@@ -6,7 +6,7 @@ A comprehensive tourism website showcasing the beauty, culture, and attractions 
 
 Visit Hawassa is a static website designed to promote tourism in Hawassa City. The site features detailed information about religious sites, entertainment venues, resorts, local cuisine, and travel tips for visitors planning to explore this beautiful lakeside city.
 
-![Lake Hawassa](images/lake%20hawassa.png)
+![Lake Hawassa](public/images/lake%20hawassa.png)
 
 ## Project Structure
 
@@ -35,17 +35,17 @@ The landing page welcomes visitors with stunning imagery and highlights the top 
 ### Religious Sites
 Explore the spiritual heritage of Hawassa with detailed information about churches, monasteries, cathedrals, and mosques throughout the city.
 
-![St. Gabriel Monastery](images/r1.jpg)
+![St. Gabriel Monastery](public/images/r1.jpg)
 
 ### Entertainment and Activities
 Discover recreational activities available in Hawassa, from boat rides on Lake Hawassa to parks, sports facilities, game zones, and cultural venues.
 
-![Boat Rides on Lake Hawassa](images/boat_image.jpg)
+![Boat Rides on Lake Hawassa](public/images/boat_image.jpg)
 
 ### Resorts and Accommodations
 Browse through premium resorts and hotels in Hawassa, including Haile Resort, Lewi Resort, and various international hotels with modern amenities.
 
-![Haile Resort](images/haile_resort.png)
+![Haile Resort](public/images/haile_resort.png)
 
 ### Local Cuisine
 Learn about traditional Ethiopian food and dining options available in Hawassa, featuring the famous fish dishes and international cuisine.
@@ -53,7 +53,7 @@ Learn about traditional Ethiopian food and dining options available in Hawassa, 
 ### Photo Gallery
 View a curated collection of nature and cultural photographs showcasing the scenic beauty and vibrant culture of Hawassa.
 
-![Cultural Heritage](images/c1.jpg)
+![Cultural Heritage](public/images/c1.jpg)
 
 ### Travel Tips
 Practical information for visitors including transportation options, best times to visit, local customs, and essential travel advice.
