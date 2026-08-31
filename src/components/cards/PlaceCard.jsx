@@ -6,7 +6,7 @@ const PlaceCard = ({ place, type = "attractions" }) => {
     <div className="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col h-full border border-gray-100">
       <div className="relative aspect-[16/9] w-full overflow-hidden">
         <img 
-          src={place.image} 
+          src={encodeURI(place.image)} 
           alt={place.name} 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           onError={(e) => {

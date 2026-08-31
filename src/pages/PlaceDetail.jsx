@@ -17,7 +17,7 @@ const PlaceDetail = () => {
       {/* Hero Image */}
       <div className="w-full h-[260px] md:h-[320px] lg:h-[400px] relative">
         <img 
-          src={place.image} 
+          src={encodeURI(place.image)} 
           alt={place.name} 
           className="w-full h-full object-cover"
           onError={(e) => {

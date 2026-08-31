@@ -57,7 +57,7 @@ const GalleryGrid = ({ images }) => {
             className="relative group cursor-pointer aspect-square overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <img 
-              src={image.src} 
+              src={encodeURI(image.src)} 
               alt={image.alt} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               onError={(e) => {
@@ -109,7 +109,7 @@ const GalleryGrid = ({ images }) => {
           {/* Image */}
           <div className="w-full h-full max-w-6xl max-h-[85vh] p-4 flex flex-col items-center justify-center relative" onClick={(e) => e.stopPropagation()}>
             <img 
-              src={images[currentIndex].src} 
+              src={encodeURI(images[currentIndex].src)} 
               alt={images[currentIndex].alt}
               className="max-w-full max-h-[80vh] object-contain rounded-sm shadow-2xl"
               onError={(e) => {

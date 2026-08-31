@@ -9,7 +9,7 @@ const Hero = ({ title, subtitle, image, showButtons = false, size = "default" })
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${image}')` }}
+        style={{ backgroundImage: `url('${encodeURI(image)}')` }}
       >
         {/* Controlled 40% dark overlay for readability */}
         <div className="absolute inset-0 bg-black/40"></div>
