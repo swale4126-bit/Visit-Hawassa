@@ -38,7 +38,7 @@ const Navbar = () => {
         { name: 'Entertainment', path: '/entertainment' }
       ]
     },
-    { name: 'Stay', path: '/hotels' },
+    { name: 'Hotels', path: '/hotels' },
     { name: 'Food', path: '/food' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Travel Tips', path: '/travel-tips' },

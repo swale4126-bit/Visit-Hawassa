@@ -14,7 +14,7 @@ export const foodPlaces = [
     name: "Traditional Ethiopian Restaurants",
     category: "Ethiopian Food",
     description: "Experience authentic Ethiopian cuisine. Enjoy dishes like Doro Wat, Kitfo, and Tibs served on traditional Injera.",
-    image: "/images/c1.jpg",
+    image: "/images/tr.jpeg",
     address: "Hawassa City, Sidama, Ethiopia",
     latitude: 7.0490,
     longitude: 38.4720
